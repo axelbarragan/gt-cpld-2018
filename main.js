@@ -10,7 +10,7 @@ $(function () { // wait for document ready
  })
 
  function jeje() {
-   TweenMax.from( $('.orale'), 1.5,
+   TweenMax.from( $('.orale'), 0.5,
     {css:{scale:0.5, opacity:0, rotation: 10}, 
     ease:Quad.easeInOut
   });
