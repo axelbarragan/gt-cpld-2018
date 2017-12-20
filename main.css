@@ -1,7 +1,36 @@
+@font-face {
+  font-family: "Bestlovers";
+  src: url('fonts/Bestlovers/Bestlovers.eot');
+  src: url('fonts/Bestlovers/Bestlovers.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Bestlovers/Bestlovers.woff') format('woff'),
+       url('fonts/Bestlovers/Bestlovers.ttf') format('truetype'),
+       url('fonts/Bestlovers/Bestlovers.svg#webfont') format('svg');
+}
+@font-face {
+  font-family: "Century";
+  src: url('../fonts/Century/CenturyGothicRegular.eot');
+  src: url('../fonts/Century/CenturyGothicRegular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Century/CenturyGothicRegular.woff') format('woff'),
+       url('../fonts/Century/CenturyGothicRegular.ttf') format('truetype'),
+       url('../fonts/Century/CenturyGothicRegular.svg#webfont') format('svg');
+}
+@font-face {
+  font-family: "Cocogoose";
+  src: url('../fonts/Cocogoose/Cocogoose.eot');
+  src: url('../fonts/Cocogoose/Cocogoose.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Cocogoose/Cocogoose.woff') format('woff'),
+       url('../fonts/Cocogoose/Cocogoose.ttf') format('truetype'),
+       url('../fonts/Cocogoose/Cocogoose.svg#webfont') format('svg');
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
+}
+
+.letras-bestlovers {
+  font-family: "Bestlovers";
 }
 
 .texto-centro {
@@ -11,17 +40,20 @@ body {
 .texto-blanco {
   color: #fff;
 }
+.texto-negro {
+  color: #000;
+}
 
 .nav-tabs > li, .nav-pills > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-     zoom:1; /* hasLayout ie7 trigger */
-    font-size: 20px;
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  zoom:1; /* hasLayout ie7 trigger */
+  font-size: 20px;
 }
 
 .nav-tabs, .nav-pills {
-    text-align:center;
+  text-align:center;
 }
 .seccion-contador {
   padding-top: 50px;
@@ -244,11 +276,59 @@ h1 {
 }
 .social-instagram {
   background-color: #ffffff;
-}*/
-.social {
-  background-color: #FFF;
-}
-.social>a {
-  color: black !important;
+  }*/
+  .social {
+    background-color: #FFF;
+  }
+  .social>a {
+    color: black !important;
+  }
+/*---*/
+
+/*Boton blanco*/
+.btn-blanco { 
+  color: #000000; 
+  background-color: #FFFFFF; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-blanco:hover, 
+.btn-blanco:focus, 
+.btn-blanco:active, 
+.btn-blanco.active, 
+.open .dropdown-toggle.btn-blanco { 
+  color: #000000; 
+  background-color: #E0DFE3; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-blanco:active, 
+.btn-blanco.active, 
+.open .dropdown-toggle.btn-blanco { 
+  background-image: none; 
+} 
+ 
+.btn-blanco.disabled, 
+.btn-blanco[disabled], 
+fieldset[disabled] .btn-blanco, 
+.btn-blanco.disabled:hover, 
+.btn-blanco[disabled]:hover, 
+fieldset[disabled] .btn-blanco:hover, 
+.btn-blanco.disabled:focus, 
+.btn-blanco[disabled]:focus, 
+fieldset[disabled] .btn-blanco:focus, 
+.btn-blanco.disabled:active, 
+.btn-blanco[disabled]:active, 
+fieldset[disabled] .btn-blanco:active, 
+.btn-blanco.disabled.active, 
+.btn-blanco[disabled].active, 
+fieldset[disabled] .btn-blanco.active { 
+  background-color: #FFFFFF; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-blanco .badge { 
+  color: #FFFFFF; 
+  background-color: #000000; 
 }
 /*---*/
