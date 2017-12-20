@@ -1,15 +1,5 @@
 $(function () { // wait for document ready
 
- var owl = $('.owl-carousel');
- owl.owlCarousel({
-  autoplay:true,
-  loop: true,
-  dots: true,
-  item:1
-});
- owl.on('changed.owl.carousel', function(event) {
-  jeje();
-})
 
  function jeje() {
    TweenMax.from( $('.orale'), 0.5,
