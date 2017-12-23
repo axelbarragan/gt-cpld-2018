@@ -241,6 +241,11 @@ h1 {
 .pad-bot-15 {
   padding-bottom: 15px;
 }
+.no-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin: 0 !important;
+}
 
 /*Social link*/
 .list-inline {
