@@ -72,6 +72,14 @@ body {
   background-color: #292c31;
 }
 
+#galeria {
+  position: relative;
+}
+
+#patrocinadores {
+  position: relative;
+}
+
 /*SECCION COUNTDOWN*/
 .content {
   padding: 10px 44px;
@@ -144,7 +152,8 @@ body {
 }
 
 .section {
-  height: 100vh;
+  height: auto !important;
+  padding-top: 50px;
 }
 
 #pinContainer {
