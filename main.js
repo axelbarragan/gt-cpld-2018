@@ -9,9 +9,9 @@ $(function () { // wait for document ready
  }
 
  /*---*/
-  /*Contador*/
-  var target_date = new Date('jun, 03, 2018').getTime();
-  
+ /*Contador*/
+ var target_date = new Date('jun, 03, 2018').getTime();
+
   // variables for time units
   var days, hours, minutes, seconds;
   // get tag element
@@ -34,18 +34,39 @@ $(function () { // wait for document ready
   }, 1000);
   /*---*/
 
+  $('.enviarDatos').click(function(e) {
+    e.preventDefault();
+    var nombre  = $('.frmNombre').val();
+    var email   = $('.frmEmail').val();
+    var mensaje = $('.frmMensaje').val();
+    if(nombre != '') {
+      if(email === '') {
+        if(mensaje === '') {
+          var dataString = $('#formContacto').serialize();
+          alert(dataString);
+        } else {
+          alert("INTRODUCE TU MENSAJE");
+        }
+      } else {
+        alert("INTRODUCE TU CORREO");
+      }
+    } else {
+      alert("INTRODUCE TU NOMBRE");
+    }
+  });
 
 
- var x = $(".one h1").offset();
- var one = $(".one").width();
- var para = $(".one h1").width();
- var right = one - (x.left + para);
- var twoOffset = $(".two h1").offset();
- var twoLeftOffset = twoOffset.left - one;
- var firstLine = twoLeftOffset + right;
- var leftPos = para + x.left;
 
- /*$(".horizontal-line").css({"top": x.top, "left": leftPos});*/
+  var x = $(".one h1").offset();
+  var one = $(".one").width();
+  var para = $(".one h1").width();
+  var right = one - (x.left + para);
+  var twoOffset = $(".two h1").offset();
+  var twoLeftOffset = twoOffset.left - one;
+  var firstLine = twoLeftOffset + right;
+  var leftPos = para + x.left;
+
+  /*$(".horizontal-line").css({"top": x.top, "left": leftPos});*/
 // init controller
 var controller = new ScrollMagic.Controller();
 
