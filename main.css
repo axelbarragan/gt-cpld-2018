@@ -188,7 +188,9 @@ h1 {
 }
 
 .one {
-  background-color: rgba(0,173,104,0.7);
+  /*background-color: rgba(0,173,104,0.7);*/
+  background-image: url(images/fondo1.jpg);
+  background-size: cover;
   color: white;
 }
 
@@ -198,12 +200,16 @@ h1 {
 }
 
 .two {
-  background-color: #ff5959;
+  /*background-color: #ff5959;*/
+  background-image: url(images/fondo2.jpg);
+  background-size: cover;
   color: white;
 }
 
 .three {
-  background-color: #ff8189;
+  /*background-color: #ff8189;*/
+  background-image: url(images/fondo3.jpg);
+  background-size: cover;
   color: white;
   position: relative;
 }
