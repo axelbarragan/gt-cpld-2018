@@ -70,7 +70,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   /*text-align: center;*/
-  background-color: #292c31;
+  background-color: #4a1a1a;
 }
 
 .galeria {
@@ -88,7 +88,7 @@ body {
 }
 
 #contacto {
-  background-color: white;
+  background-color: #929292;
 }
 
 /*SECCION COUNTDOWN*/
@@ -364,4 +364,52 @@ h1 {
     color: #FFFFFF; 
     background-color: #000000; 
   }
+/*---*/
+
+/*BOTON*/
+.btn-enviarContacto { 
+  color: #FFFFFF; 
+  background-color: #4A1A1A; 
+  border-color: #000000; 
+} 
+ 
+.btn-enviarContacto:hover, 
+.btn-enviarContacto:focus, 
+.btn-enviarContacto:active, 
+.btn-enviarContacto.active, 
+.open .dropdown-toggle.btn-enviarContacto { 
+  color: #FFFFFF; 
+  background-color: #FF8288; 
+  border-color: #000000; 
+} 
+ 
+.btn-enviarContacto:active, 
+.btn-enviarContacto.active, 
+.open .dropdown-toggle.btn-enviarContacto { 
+  background-image: none; 
+} 
+ 
+.btn-enviarContacto.disabled, 
+.btn-enviarContacto[disabled], 
+fieldset[disabled] .btn-enviarContacto, 
+.btn-enviarContacto.disabled:hover, 
+.btn-enviarContacto[disabled]:hover, 
+fieldset[disabled] .btn-enviarContacto:hover, 
+.btn-enviarContacto.disabled:focus, 
+.btn-enviarContacto[disabled]:focus, 
+fieldset[disabled] .btn-enviarContacto:focus, 
+.btn-enviarContacto.disabled:active, 
+.btn-enviarContacto[disabled]:active, 
+fieldset[disabled] .btn-enviarContacto:active, 
+.btn-enviarContacto.disabled.active, 
+.btn-enviarContacto[disabled].active, 
+fieldset[disabled] .btn-enviarContacto.active { 
+  background-color: #4A1A1A; 
+  border-color: #000000; 
+} 
+ 
+.btn-enviarContacto .badge { 
+  color: #4A1A1A; 
+  background-color: #FFFFFF; 
+}
 /*---*/
