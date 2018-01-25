@@ -8,6 +8,14 @@ $(function () { // wait for document ready
   });
  }
 
+  $('.slider3').bxSlider({
+    adaptiveHeight: true,
+    mode: 'vertical',
+    auto: true,
+    speed: 400,
+    pause: 5000
+  });
+
  /*---*/
  /*Contador*/
  var target_date = new Date('jun, 03, 2018').getTime();
