@@ -44,6 +44,13 @@ body {
 .texto-negro {
   color: #000;
 }
+.texto-rosa {
+  color: #ff8288;
+}
+
+.fondo-blanco {
+  background-color: white;
+}
 
 .nav-tabs > li, .nav-pills > li {
   float:none;
@@ -268,6 +275,9 @@ h1 {
 }
 .pad-bot-15 {
   padding-bottom: 15px;
+}
+.pad-bot-50 {
+  padding-bottom: 50px;
 }
 .no-padding {
   padding-left: 0px !important;
