@@ -8,13 +8,13 @@ $(function () { // wait for document ready
   });
  }
 
-  $('.slider3').bxSlider({
-    adaptiveHeight: true,
-    mode: 'vertical',
-    auto: true,
-    speed: 400,
-    pause: 5000
-  });
+ $('.slider3').bxSlider({
+  adaptiveHeight: true,
+  mode: 'vertical',
+  auto: true,
+  speed: 400,
+  pause: 5000
+});
 
  /*---*/
  /*Contador*/
@@ -42,24 +42,68 @@ $(function () { // wait for document ready
   }, 1000);
   /*---*/
 
+  function validarLetras(letras){
+    var re =  /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+    return re.test(letras);
+  }
+
+  function validarCorreo(correo){
+    var re =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+    return re.test(correo);
+  }
+
+  
+
   $('.enviarDatos').click(function(e) {
     e.preventDefault();
     var nombre  = $('.frmNombre').val();
     var email   = $('.frmEmail').val();
     var mensaje = $('.frmMensaje').val();
-    if(nombre != '') {
-      if(email === '') {
-        if(mensaje === '') {
-          var dataString = $('#formContacto').serialize();
-          alert(dataString);
+    if(nombre.length>0) {
+      if(validarLetras(nombre)) {
+        if(email.length>0) {
+          if(validarCorreo(email)) {
+            if(mensaje.length>0) {
+              var dataString = $('#formContacto').serialize();
+              $.ajax({
+                type: "POST",
+                url: "php/newContacto.php",
+                data: dataString,
+                beforeSend: function() {
+                  $('.inpu').prop('disabled', true);
+                },
+                success: function(data) {
+                  console.log(data);
+                  $('.inpu').prop('disabled', false);
+                  var json=JSON.parse(data);
+                  if(json.respuesta=='bien') {
+                    $('.inpu').val('');
+                    $('.error-rec').remove();
+                    alert("TU MENSAJE HA SIDO ENVIADO");
+                  } else {
+                    console.log("Error: "+json.error+" | Data: "+data);
+                  }
+                },
+              });
+            } else {
+              alert("INTRODUCE TU MENSAJE");
+              $('.frmMensaje').focus();
+            }
+          } else {
+            alert("VERIFICA TU CORREO");
+            $('.frmEmail').focus();
+          }
         } else {
-          alert("INTRODUCE TU MENSAJE");
+          alert("INTRODUCE TU CORREO");
+          $('.frmEmail').focus();
         }
       } else {
-        alert("INTRODUCE TU CORREO");
+        alert("VERIFICA TU NOMBRE, SÓLO SE PERMITEN LETRAS.");
+        $('.frmNombre').focus();
       }
     } else {
       alert("INTRODUCE TU NOMBRE");
+      $('.frmNombre').focus();
     }
   });
 
