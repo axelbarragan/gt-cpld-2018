@@ -38,7 +38,7 @@ $(function () { // wait for document ready
     seconds = parseInt(seconds_left % 60);
 
     // format countdown string + set tag value
-    countdown.innerHTML = '<span class="days">' + days +  ' <b>dias</b></span> <span class="hours">' + hours + ' <b>horas</b></span> <span class="minutes">' + minutes + ' <b>minutos</b></span> <span class="seconds">' + seconds + ' <b>segundos</b></span>';  
+    countdown.innerHTML = '<div class="hidden-xs"><span class="days">' + days +  ' <b>dias</b></span><span class="hours">' + hours + ' <b>horas</b></span> <span class="minutes">' + minutes + ' <b>minutos</b></span> <span class="seconds">' + seconds + ' <b>segundos</b></span></div>   <div class="visible-xs texto-centro "><table class="center-block"><tr><td><span class="days">' + days +  ' <b>dias</b></span></td></tr></tr><td><span class="hours">' + hours + ' <b>horas</b></span></td></tr></tr><td><span class="minutes">' + minutes + ' <b>minutos</b></span></td></tr></tr><td><span class="seconds">' + seconds + ' <b>segundos</b></span></td></tr></table></div>';  
   }, 1000);
   /*---*/
 

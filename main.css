@@ -168,6 +168,11 @@ body {
     visibility: hidden;
   }
 }
+@media(max-width: 766px) {
+  #pinContainer {
+    display: none;
+  }
+}
 
 .section {
   height: auto !important;
