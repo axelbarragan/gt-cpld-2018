@@ -1,5 +1,8 @@
 $(function () { // wait for document ready
 
+ $('.nav a').click(function(){
+    $('.navbar-ex1-collapse').collapse('hide');
+  });
 
  function jeje() {
    TweenMax.from( $('.orale'), 0.5,
