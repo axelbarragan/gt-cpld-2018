@@ -16,11 +16,11 @@
 }
 @font-face {
   font-family: "Cocogoose";
-  src: url('../fonts/Cocogoose/Cocogoose.eot');
-  src: url('../fonts/Cocogoose/Cocogoose.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Cocogoose/Cocogoose.woff') format('woff'),
-  url('../fonts/Cocogoose/Cocogoose.ttf') format('truetype'),
-  url('../fonts/Cocogoose/Cocogoose.svg#webfont') format('svg');
+  src: url('fonts/Cocogoose/Cocogoose.eot');
+  src: url('fonts/Cocogoose/Cocogoose.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Cocogoose/Cocogoose.woff') format('woff'),
+  url('fonts/Cocogoose/Cocogoose.ttf') format('truetype'),
+  url('fonts/Cocogoose/Cocogoose.svg#webfont') format('svg');
 }
 
 body {
@@ -32,6 +32,12 @@ body {
 
 .letras-bestlovers {
   font-family: "Bestlovers";
+}
+.letras-coco {
+  font-family: "Cocogoose";
+}
+.letras-century {
+  font-family: "Century";
 }
 
 .texto-centro {
@@ -97,6 +103,26 @@ body {
 #contacto {
   background-color: #929292;
 }
+
+/*SECCION GRACIAS*/
+.contenedor {
+  padding-top: 250px;
+}
+h2.veces {
+  color: #FFF;
+  font-size: 6em;
+}
+h1.gracias {
+  color: #ff8189;
+  font-size: 15em;
+  padding-bottom: 10px;
+  margin-top: 0 !important;
+}
+.agradecimiento {
+  font-size: 1.8em;
+  text-transform: none !important;
+}
+/***/
 
 /*SECCION COUNTDOWN*/
 .content {
@@ -171,6 +197,23 @@ body {
 @media(max-width: 766px) {
   #pinContainer {
     display: none;
+  }
+  .contenedor {
+    padding-top: 150px !important;
+  }
+  h2.veces {
+    font-size: 2em !important;
+  }
+  h1.gracias {
+    font-size: 4em !important;
+  }
+  .agradecimiento {
+    font-size: 1.2em;
+  }
+}
+@media(min-width: 768px) and (max-width: 992px) {
+  .contenedor {
+    padding-bottom: 100px !important;
   }
 }
 
@@ -255,6 +298,14 @@ h1 {
   height: auto;
   background: #333333;
   color: #fff;
+}
+.cajafooter {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
 }
 
 /*Padding top*/

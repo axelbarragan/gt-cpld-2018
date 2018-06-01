@@ -21,29 +21,7 @@ $(function () { // wait for document ready
 
  /*---*/
  /*Contador*/
- var target_date = new Date('jun, 03, 2018').getTime();
-
-  // variables for time units
-  var days, hours, minutes, seconds;
-  // get tag element
-  var countdown = document.getElementById('countdown');
-  // update the tag with id "countdown" every 1 second
-  setInterval(function () {
-    // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-
-    // format countdown string + set tag value
-    countdown.innerHTML = '<div class="hidden-xs"><span class="days">' + days +  ' <b>dias</b></span><span class="hours">' + hours + ' <b>horas</b></span> <span class="minutes">' + minutes + ' <b>minutos</b></span> <span class="seconds">' + seconds + ' <b>segundos</b></span></div>   <div class="visible-xs texto-centro "><table class="center-block"><tr><td><span class="days">' + days +  ' <b>dias</b></span></td></tr></tr><td><span class="hours">' + hours + ' <b>horas</b></span></td></tr></tr><td><span class="minutes">' + minutes + ' <b>minutos</b></span></td></tr></tr><td><span class="seconds">' + seconds + ' <b>segundos</b></span></td></tr></table></div>';  
-  }, 1000);
-  /*---*/
+ 
 
   function validarLetras(letras){
     var re =  /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
